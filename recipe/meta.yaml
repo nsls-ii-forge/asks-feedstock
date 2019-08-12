@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
+    - python >=3.6
     - async_generator
     - h11
     - multio >=0.2.3
