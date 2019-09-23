@@ -38,7 +38,3 @@ about:
   license_family: MIT
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENCE.txt'
   summary: asks is an async requests-like http lib, for use in conjunction with the wonderful curio and trio async libs.
-
-extra:
-  recipe-maintainers:
-    - CJ-Wright
