@@ -20,17 +20,17 @@ requirements:
     - pip
   run:
     - python >=3.6
+    - anyio
     - async_generator
     - h11
-    - multio >=0.2.3
 
 test:
   imports:
     - asks
   requires:
     - curio
+    - overly
     - pytest
-    - trio
 
 about:
   home: https://github.com/theelous3/asks
