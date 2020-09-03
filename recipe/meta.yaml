@@ -1,5 +1,6 @@
 {% set name = "asks" %}
-{% set version = "2.4.8" %}
+{% set version = "2.4.10" %}
+{% set sha256 = "c9db16bdf9fed8cae76db3b4365216ea2f1563b8ab9fe9a5e8e554177de61192" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +8,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dcf3b0e80b185430cac1e563a97b2630062893adbb73655d5e8600c83ab63342
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -25,16 +26,16 @@ requirements:
     - h11
 
 test:
-  imports:
-    - asks
   requires:
     - curio
     - overly
     - pytest
+  imports:
+    - asks
 
 about:
   home: https://github.com/theelous3/asks
   license: MIT
   license_family: MIT
-  license_file: {{ environ["RECIPE_DIR"] }}/LICENCE.txt
+  license_file: LICENCE.txt
   summary: asks is an async requests-like http lib, for use in conjunction with the wonderful curio and trio async libs.
