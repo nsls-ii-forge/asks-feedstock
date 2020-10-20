@@ -5,11 +5,9 @@ Home: https://github.com/theelous3/asks
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/asks-feedstock/blob/master/LICENSE.txt)
 
 Summary: asks is an async requests-like http lib, for use in conjunction with the wonderful curio and trio async libs.
-
-
 
 Current build status
 ====================
